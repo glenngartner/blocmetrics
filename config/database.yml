@@ -17,10 +17,12 @@
 default: &default
   adapter: postgresql
   encoding: unicode
+  host: localhost
   # For details on connection pooling, see rails configuration guide
   # http://guides.rubyonrails.org/configuring.html#database-pooling
+  username: blocmetrics
+  password: blocmetrics
   pool: 5
-
 development:
   <<: *default
   database: blocmetrics_development
