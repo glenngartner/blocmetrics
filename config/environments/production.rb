@@ -23,7 +23,7 @@ Rails.application.configure do
   # Disable serving static files from the `/public` folder by default since
   # Apache or NGINX already handles this.
   config.serve_static_files = ENV['RAILS_SERVE_STATIC_FILES'].present?
-  config.action_mailer.default_url_options = { host: 'sleepy-savannah-94817.herokuapp.com'}
+  config.action_mailer.default_url_options = { host: 'https://fast-temple-95000.herokuapp.com/'}
 
 
   # Compress JavaScripts and CSS.
