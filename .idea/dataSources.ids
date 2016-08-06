@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<component name="dataSourceStorage">
+  <data-source name="Rails blocmetrics: development" uuid="c3b90f08-cbe6-4146-aa88-e0ad9e68ee3b">
+    <database-info product="" version="" jdbc-version="" driver-name="" driver-version=""/>
+  </data-source>
+  <data-source name="Rails blocmetrics: test" uuid="a063db92-6c58-445c-89cc-c7a200aa5c34">
+    <database-info product="" version="" jdbc-version="" driver-name="" driver-version=""/>
+  </data-source>
+</component>

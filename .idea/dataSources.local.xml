@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="dataSourceStorageLocal">
+    <data-source name="Rails blocmetrics: development" uuid="c3b90f08-cbe6-4146-aa88-e0ad9e68ee3b">
+      <first-sync>true</first-sync>
+      <user-name>g</user-name>
+      <user-password>df96df8fdf97df8adfefdfe4dffcdff1df88dfc6dfc5dfc9dfcbdfc6dff5dfdadfcddff5dfdadfcbdfd9dfd9dfdddfc5dfd8dfcedf88dff7df8adf8fdf94</user-password>
+    </data-source>
+    <data-source name="Rails blocmetrics: test" uuid="a063db92-6c58-445c-89cc-c7a200aa5c34">
+      <first-sync>true</first-sync>
+      <user-name>g</user-name>
+      <user-password>df96df8fdf97df8adfefdfe4dffcdff1df88dfc6dfc5dfc9dfcbdfc6dff5dfdadfcddff5dfdadfcbdfd9dfd9dfdddfc5dfd8dfcedf88dff7df8adf8fdf94</user-password>
+    </data-source>
+  </component>
+</project>
