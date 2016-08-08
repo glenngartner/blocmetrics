@@ -1,2 +1,7 @@
 @import "bootstrap-sprockets";
-@import "bootstrap"; 
+@import "bootstrap";
+
+.navbar-centered {
+  padding-top: 15px;
+  padding-bottom: 15px; 
+}

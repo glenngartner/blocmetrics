@@ -16,11 +16,13 @@
                     </div>
 
                 </div>
-                <ul class="nav navbar-nav">
-                    <li class='navbar-nav'>
+                <ul class="nav navbar-nav pull-right">
+                    <li>
                         <% if user_signed_in? %>
-                        Signed in as:
-                        <%= current_user.email %>
+                        <p class="navbar-centered">
+                            Signed in as:
+                            <%= current_user.email %>
+                        </p>
                     </li>
 
                     <li><%= link_to 'Edit profile', edit_user_registration_path, :class => 'navbar-link' %></li>
