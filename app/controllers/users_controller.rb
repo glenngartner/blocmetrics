@@ -5,8 +5,8 @@ class UsersController < ApplicationController
   def destroy
   end
 
-  def edit
-  end
+  # def edit
+  # end
 
   def index
   end
@@ -15,6 +15,8 @@ class UsersController < ApplicationController
   end
 
   def show
+    @user = User.find(params[:id])
+    @registered_applications = @user.registered_applications.find(params[:id])
   end
 
   def update

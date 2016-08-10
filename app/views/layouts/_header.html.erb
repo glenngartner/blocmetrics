@@ -11,7 +11,7 @@
                     <% if user_signed_in? %>
                     <p class="navbar-centered">
                         Signed in as:
-                        <%= current_user.email %>
+                        <%= link_to current_user.email, user_path, :class => 'navbar-link'%>
                     </p>
                 </li>
 
