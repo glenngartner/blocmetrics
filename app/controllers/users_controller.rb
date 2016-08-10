@@ -5,10 +5,11 @@ class UsersController < ApplicationController
   def destroy
   end
 
-  # def edit
-  # end
+  def edit
+  end
 
   def index
+    @users = User.all
   end
 
   def new
@@ -16,7 +17,6 @@ class UsersController < ApplicationController
 
   def show
     @user = User.find(params[:id])
-    @registered_applications = @user.registered_applications.find(params[:id])
   end
 
   def update

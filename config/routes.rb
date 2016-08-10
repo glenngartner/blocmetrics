@@ -1,11 +1,12 @@
 Rails.application.routes.draw do
-    resources :users
-    # get '/users/:id', to: 'users#show'
+    # get 'users/:id' => 'users#show'
 
     resources :registered_applications
 
     devise_for :users
-    root to: 'welcome#index'
+    resources :users, only: [:show, :index]
+
+    root to: 'users#index'
 
     # The priority is based upon order of creation: first created -> highest priority.
     # See how all your routes lay out with "rake routes".

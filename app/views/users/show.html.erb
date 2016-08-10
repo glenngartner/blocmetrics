@@ -1,7 +1,7 @@
-<h1>User's Email </h1>
-<p><%= @user.email %></p>
-<p>Created On: <%= @user.created_at %></p>
-<p>Updated On: <%= @user.updated_at %></p>
-<%= Time.now %>
-<h1>Registered Applications</h1>
-<p><%= @registered_applications.name %></p>
+<p><strong>Email:</strong> <%= @user.email %></p>
+<p><strong>Joined Us On:</strong> <%= @user.created_at %></p>
+<p><strong>Last Updated Your Profile On:</strong> <%= @user.updated_at %></p>
+
+<h1>Registered Applications:</h1>
+<p><%= @user.registered_applications.first.name %></p>
+<p><%= @user.registered_applications.second.name %></p>
