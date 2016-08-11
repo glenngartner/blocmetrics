@@ -1,2 +1,14 @@
-<h1>Welcome#index</h1>
-<p>Find me in app/views/welcome/index.html.erb</p>
+<div class='container'>
+    <h1>Welcome:
+        <%= current_user.email %>
+    </h1>
+    <p>
+      You've been a valued user since
+    </p>
+</div>
+<div class='container'>
+    <h1>
+        View Your
+        <%= link_to 'Registered Applications', registered_applications_path, :class => 'navbar-link' %>
+    </h1>
+</div>
