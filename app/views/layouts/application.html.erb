@@ -4,9 +4,9 @@
         <%= render 'layouts/head_tag' %>
     </head>
     <body class="container">
-      <header>
-        <%= render 'layouts/header' %>
-      </header>
+        <header>
+            <%= render 'layouts/header' %>
+        </header>
 
         <% if notice.present? %>
         <aside class="alert alert-info">
@@ -16,7 +16,7 @@
 
         <% if alert.present? %>
         <aside class="alert alert-danger">
-            <% alert %>
+            <%= alert %>
         </aside>
         <% end %>
 

@@ -1,14 +1,24 @@
-<div class='container'>
-    <h1>Welcome:
-        <%= current_user.email %>
-    </h1>
-    <p>
-      You've been a valued user since
-    </p>
+<div class='container-fluid'>
+    <div class='row'>
+        <div class='col-md-8'>
+            <h3>Welcome:
+                <%= current_user.email %>
+            </h3>
+            <h5>
+                A valued user for
+                <%= time_ago_in_words(current_user.created_at) %>
+
+            </h5>
+        </div>
+    </div>
 </div>
-<div class='container'>
-    <h1>
-        View Your
-        <%= link_to 'Registered Applications', registered_applications_path, :class => 'navbar-link' %>
-    </h1>
+<div class='container-fluid'>
+    <div class='row'>
+        <div class='col-md-8'>
+            <h3>
+                View Your
+                <%= link_to 'Registered Applications', registered_applications_path, :class => 'navbar-link' %>
+            </h3>
+        </div>
+    </div>
 </div>

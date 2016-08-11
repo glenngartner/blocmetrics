@@ -1,6 +1,6 @@
-<div class='media'>
-    <div class='media-body'>
-        <div class='media-heading'>
+<div class='container-fluid'>
+    <div class='row'>
+        <div class='col-md-8'>
             <h3>Application Name:</h3>
             <p>
                 <%= @reg_app.name %>
@@ -13,10 +13,18 @@
             </p>
 
         </div>
-
-        <%= link_to "Edit App", edit_registered_application_path, class:'btn btn-warning' %>
-        <%= link_to "App List", registered_applications_path, class:'btn btn-success' %>
-        <%= link_to "Delete App", @reg_app, method: :delete, class: 'btn btn-danger', data: {confirm: 'Are you sure you want to delete this app?'} %>
-
+    </div>
+    <div class='row'>
+        <div class='col-md-8'>
+            <div class='btn-group' role='group'>
+                <%= link_to "Edit App", edit_registered_application_path, class:'btn btn-warning' %>
+                <%= link_to "Delete App", @reg_app, method: :delete, class: 'btn btn-danger', data: {confirm: 'Are you sure you want to delete this app?'} %>
+            </div>
+        </div>
+    </div>
+    <div class='row'>
+        <div class='col-md-8'>
+            <%= link_to "Return to App List", registered_applications_path %>
+        </div>
     </div>
 </div>

@@ -1,18 +1,21 @@
-<div class='container'>
-    <h2>
-        All of Your Registered Applications:
-    </h2>
+<div class='container-fluid'>
+  <div class='row'>
 
-    <% @reg_apps.each do |app| %>
     <div class='media'>
         <div class='media-body'>
-            <div class='media-heading'>
-            <li><%= link_to app.name, registered_application_path(app.id)%></li>
-            </div>
+            <h3 class='media-heading'>
+                Your Registered Applications:
+            </h3>
+            <% @reg_apps.each do |app| %>
+            <p><%= link_to app.name, registered_application_path(app.id)%></p>
+            <% end %>
         </div>
     </div>
-    <% end %>
 
-    <%= link_to "New App", new_registered_application_path, class:'btn btn-primary' %>
-    
+    <div class='row'>
+        <div class='col-md-8'>
+            <%= link_to "New App", new_registered_application_path, class:'btn btn-primary' %>
+        </div>
+    </div>
+</div>
 </div>
