@@ -18,11 +18,26 @@
         <div class='col-md-8'>
             <div class='media-body'>
                 <div class='media-heading'>
-                    <h3>Events for this app:</h3>
+                    <h3>There
+                        <% if @events.count == 1%>
+                        is
+                        <%= @events.count %>
+                        Event
+                        <%else %>
+                        are
+                        <%= @events.count %>
+                        Events
+                        <% end %>
+
+                        for this app:
+                    </h3>
+
                     <% @events.each do |e| %>
                     <p>
-                        <%= e.name %> <strong>occurred:</strong>
+                        <strong><%= e.name %>
+                        </strong>occurred:
                         <%= time_ago_in_words(e.created_at) %>
+                        ago
                     </p>
                     <% end %>
                 </div>

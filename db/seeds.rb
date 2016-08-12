@@ -6,12 +6,39 @@
 #   cities = City.create([{ name: 'Chicago' }, { name: 'Copenhagen' }])
 #   Mayor.create(name: 'Emanuel', city: cities.first)
 
-50.times do
-    fake_email = Faker::Name.name
+require 'faker'
+
+user = User.create!(email: 'admin@admin.com', password: 'password')
+
+user_id = 1
+reg_app_id = 1
+
+25.times do
+    fake_app_name = Faker::App.name
+    fake_url = Faker::Internet.url
+    RegisteredApplication.create!(name: fake_app_name, url: fake_url, user_id: user_id)
+    # appGen()
+
+    10.times do
+        # eventGen()
+        event_name = Faker::Name.name
+        Event.create!(name: event_name, registered_application_id: reg_app_id)
+    end
+
+    reg_app_id += 1
+end
+
+def eventGen
+    event_name = Faker::Name.name
+    Event.create!(name: event_name, registered_application_id: reg_app_id)
+end
+
+def appGen
     fake_app_name = Faker::Name.name
-    
-    User.create!(name: fake_email, password: 'password')
-    Event.create!(name: fake_name)
+    fake_url = Faker::Internet.url
+    RegisteredApplication.create!(name: fake_app_name, url: fake_url, user_id: user_id)
 end
 
 puts 'Finished Planting seed'
+puts "#{RegisteredApplication.count} Apps created for #{User.first.email}"
+puts "#{Event.count} events created"
