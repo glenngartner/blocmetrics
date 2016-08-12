@@ -5,3 +5,13 @@
 #
 #   cities = City.create([{ name: 'Chicago' }, { name: 'Copenhagen' }])
 #   Mayor.create(name: 'Emanuel', city: cities.first)
+
+50.times do
+    fake_email = Faker::Name.name
+    fake_app_name = Faker::Name.name
+    
+    User.create!(name: fake_email, password: 'password')
+    Event.create!(name: fake_name)
+end
+
+puts 'Finished Planting seed'

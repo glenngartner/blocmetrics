@@ -16,6 +16,21 @@
     </div>
     <div class='row'>
         <div class='col-md-8'>
+            <div class='media-body'>
+                <div class='media-heading'>
+                    <h3>Events for this app:</h3>
+                    <% @events.each do |e| %>
+                    <p>
+                        <%= e.name %> <strong>occurred:</strong>
+                        <%= time_ago_in_words(e.created_at) %>
+                    </p>
+                    <% end %>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class='row'>
+        <div class='col-md-8'>
             <div class='btn-group' role='group'>
                 <%= link_to "Edit App", edit_registered_application_path, class:'btn btn-warning' %>
                 <%= link_to "Delete App", @reg_app, method: :delete, class: 'btn btn-danger', data: {confirm: 'Are you sure you want to delete this app?'} %>
