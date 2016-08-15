@@ -1,10 +1,13 @@
 Rails.application.routes.draw do
     # get 'users/:id' => 'users#show'
 
+    namespace :api, defaults: { format: :json } do
+        resources :events, only: [:create]
+    end
+
     resources :registered_applications
 
     devise_for :users
-    resources :users
 
     root to: 'welcome#index'
 
