@@ -1,12 +1,12 @@
 Rails.application.routes.draw do
     # get 'users/:id' => 'users#show'
+    resources :registered_applications
 
     namespace :api, defaults: { format: :json } do
         match '/events', to: 'events#preflight', via: [:options]
         resources :events, only: [:create]
     end
 
-    resources :registered_applications
 
     devise_for :users
 

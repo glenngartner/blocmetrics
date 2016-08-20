@@ -8,7 +8,9 @@
 
 require 'faker'
 
-user = User.create!(email: 'admin@admin.com', password: 'password')
+user = User.new(email: 'admin@admin.com', password: 'password')
+user.skip_confirmation!
+user.save!
 
 user_id = 1
 reg_app_id = 1
