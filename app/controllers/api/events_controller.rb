@@ -14,6 +14,7 @@ class API::EventsController < ApplicationController
 
         if registered_application.nil?
             return render json: 'Unregistered Application', status: :unprocessable_entity
+            puts "I don't now you!"
         else
             @event = registered_application.events.new(event_params)
 
@@ -22,6 +23,7 @@ class API::EventsController < ApplicationController
 
             else
                 render json: { errors: @event.errors }, status: :unprocessable_entity
+                puts "I can't save you!"
             end
         end
     end

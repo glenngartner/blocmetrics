@@ -11,6 +11,10 @@ require 'faker'
 user = User.new(email: 'admin@admin.com', password: 'password')
 user.skip_confirmation!
 user.save!
+puts "admin created!"
+user.registered_applications.create!(name:"electron-api", url:"http://127.0.0.1")
+puts "electron-api app created!"
+
 
 user_id = 1
 reg_app_id = 1
