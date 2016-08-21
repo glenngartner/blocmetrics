@@ -14,47 +14,63 @@
 
         </div>
     </div>
+    <hr>
     <div class='row'>
         <div class='col-md-8'>
-            <div class='media-body'>
-                <div class='media-heading'>
-                    <h3>There
-                        <% if @events.count == 1%>
-                        is
-                        <%= @events.count %>
-                        Event
-                        <%else %>
-                        are
-                        <%= @events.count %>
-                        Events
-                        <% end %>
-
-                        for this app:
-                    </h3>
-
-                    <% @events.each do |e| %>
-                    <p>
-                        <strong><%= e.name %>
-                        </strong>occurred:
-                        <%= time_ago_in_words(e.created_at) %>
-                        ago
-                    </p>
+            <%=
+            pie_chart @events.group(:name).count
+          %>
+        </div>
+    </div>
+    <hr>
+    <div class='row'>
+        <div class='col-md-8'>
+            <%=
+            line_chart @reg_app.events.group_by_minute(:created_at).count
+            %>
+        </div>
+    </div>
+    <hr>
+    <div class='col-md-8'>
+        <div class='media-body'>
+            <div class='media-heading'>
+                <h3>There
+                    <% if @events.count == 1%>
+                    is
+                    <%= @events.count %>
+                    Event
+                    <%else %>
+                    are
+                    <%= @events.count %>
+                    Events
                     <% end %>
-                </div>
+
+                    for this app:
+                </h3>
+
+                <% @events.each do |e| %>
+                <p>
+                    <strong><%= e.name %>
+                    </strong>occurred:
+                    <%= time_ago_in_words(e.created_at) %>
+                    ago
+                </p>
+                <% end %>
             </div>
         </div>
     </div>
-    <div class='row'>
-        <div class='col-md-8'>
-            <div class='btn-group' role='group'>
-                <%= link_to "Edit App", edit_registered_application_path, class:'btn btn-warning' %>
-                <%= link_to "Delete App", @reg_app, method: :delete, class: 'btn btn-danger', data: {confirm: 'Are you sure you want to delete this app?'} %>
-            </div>
+</div>
+<div class='row'>
+    <div class='col-md-8'>
+        <div class='btn-group' role='group'>
+            <%= link_to "Edit App", edit_registered_application_path, class:'btn btn-warning' %>
+            <%= link_to "Delete App", @reg_app, method: :delete, class: 'btn btn-danger', data: {confirm: 'Are you sure you want to delete this app?'} %>
         </div>
     </div>
-    <div class='row'>
-        <div class='col-md-8'>
-            <%= link_to "Return to App List", registered_applications_path %>
-        </div>
+</div>
+<div class='row'>
+    <div class='col-md-8'>
+        <%= link_to "Return to App List", registered_applications_path %>
     </div>
+</div>
 </div>

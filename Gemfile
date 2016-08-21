@@ -32,7 +32,15 @@ gem 'figaro', '1.0'
 # Add bootstrappy goodness
 gem 'bootstrap-sass', '~> 3.3.7'
 
+# Use faker to generate tons of fake data
 gem 'faker'
+
+# Use chart-kick to create some kick-a charts
+gem 'chartkick'
+
+# Use group date to group events by date, and create charts by date - for use mainly with chartkick
+gem 'groupdate'
+
 # Use ActiveModel has_secure_password
 # gem 'bcrypt', '~> 3.1.7'
 
